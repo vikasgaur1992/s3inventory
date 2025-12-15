@@ -193,3 +193,12 @@ LEFT JOIN (
 ) c
 ON i.key = c.key;
 ############################################
+Test tommorow
+SELECT DISTINCT requestParameters.key AS key
+FROM cloudtrail_logs.cloudtrail_s3
+WHERE
+  eventSource = 's3.amazonaws.com'
+  AND eventName IN ('GetObject', 'HeadObject')
+  AND requestParameters.bucketName = 'autogiro-artifacts'
+  AND from_iso8601_timestamp(eventTime) >= current_date
+  AND requestParameters.key = 'autogiro-api/worker/.classpath';
