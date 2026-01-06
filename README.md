@@ -1,3 +1,4 @@
+Need to completed test case
 # s3inventory
 
 1 - https://chatgpt.com/s/t_692d2cee0e08819187a8611429bc243b
